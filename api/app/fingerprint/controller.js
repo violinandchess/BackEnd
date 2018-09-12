@@ -4,7 +4,7 @@ const repository = require( "./repository" );
 exports.create = async( req, res ) => {
     try {
       
-        const student = await repository.createStudent(  req.body );
+        const fingerprint = await repository.createFingerPrintRecord(  req.body );
         res.success( utilities.extractObject(
         student,
         [ "RegNo", "DeviceID", "SName" ],
